@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -58,16 +56,17 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     //Used padding to custom align the widgets
                     Padding(
-                      padding: EdgeInsets.only(top: 50),
+                      padding: const EdgeInsets.only(top: 50),
                       child: Container(
-                        width: 180,
-                        height: 50,
-                        decoration: BoxDecoration(color: Color(0xff008080)),
-                        child: Center(
+                        width: MediaQuery.of(context).size.width * .4,
+                        height: MediaQuery.of(context).size.height * .04,
+                        decoration:
+                            const BoxDecoration(color: Color(0xff008080)),
+                        child: const Center(
                           child: Text(
                             "Return Details",
                             style: TextStyle(
-                                fontSize: 25,
+                                fontSize: 20,
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600),
                             textAlign: TextAlign.center,
@@ -77,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
 
                     //Widget 2
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.only(top: 45, right: 150),
                       child: Text(
                         "Manufacturer :",
@@ -90,8 +89,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
 
                     //Widget 3
-                    Padding(
-                      padding: EdgeInsets.only(top: 05, left: 35, right: 120),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 05, right: 50),
                       child: Text(
                         "ABC Production Pvt. Ltd.",
                         style: TextStyle(
@@ -103,12 +102,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
 
                     //sizedbox to add space b/w widgets
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
 
                     //widget 4
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.only(right: 200),
                       child: Text(
                         "Quantity",
@@ -122,11 +121,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
                     //widget 5
                     Padding(
-                        padding: EdgeInsets.only(left: 35),
+                        padding: const EdgeInsets.only(left: 35),
                         //added row to accomodate multiple inputs in one line
 
                         child: Row(
-                          children: [
+                          children: const [
                             Flexible(
                               child: TextField(
                                   decoration: InputDecoration(
@@ -142,13 +141,13 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ],
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
 
                     //widget 6
-                    Padding(
-                      padding: EdgeInsets.only(left: 30, right: 170),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 5, right: 120),
                       child: Text(
                         "Transportation :",
                         style: TextStyle(
@@ -161,11 +160,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
                     //widget 7
                     Padding(
-                        padding: EdgeInsets.only(left: 30),
+                        padding: const EdgeInsets.only(left: 5),
                         child: Column(
                           children: [
                             ListTile(
-                              title: Text(
+                              title: const Text(
                                 "Provide me transportation",
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
@@ -180,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   }),
                             ),
                             ListTile(
-                              title: Text(
+                              title: const Text(
                                 "No, I'll take care of it",
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
@@ -196,7 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             )
                           ],
                         )),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
 
@@ -205,17 +204,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 130,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                          color: Color(0xff008080),
+                          color: const Color(0xff008080),
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(
                         children: [
                           Padding(
-                              padding:
-                                  EdgeInsets.only(top: 20, left: 30, right: 80),
+                              padding: const EdgeInsets.only(
+                                  top: 20, left: 30, right: 30),
 
                               // added a row so you can add logic to the amount calculated
                               child: Row(
-                                children: [
+                                children: const [
                                   Text(
                                     "Receiving Amount:",
                                     style: TextStyle(
@@ -224,7 +223,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         color: Colors.white),
                                     textAlign: TextAlign.left,
                                   ),
-                                  SizedBox(width: 15),
+                                  SizedBox(width: 5),
                                   Text(
                                     "Rs. 550",
                                     style: TextStyle(
@@ -234,14 +233,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                   )
                                 ],
                               )),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
 
                           //widget 9
                           //you can change this to any submit button
                           ElevatedButton(
-                            child: Text("Return Now"),
+                            child: const Text("Return Now"),
                             style: ButtonStyle(
                               shape: MaterialStateProperty.all<
                                       RoundedRectangleBorder>(
